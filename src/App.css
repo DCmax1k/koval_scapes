@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manuale", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #ECEDDC;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 0;
+  padding-right: 10vh;
 }
 
-.App-link {
-  color: #61dafb;
+.headerLogo {
+  height: 8vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.headerLinks {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+}
+.headerLinks > a {
+  text-decoration: none;
+  color: black;
+  font-size: 2vh;
+  font-weight: 600;
+}
+
+.contactUsButton {
+  padding: 1.5vh 3vh;
+  background-color: #2C2C2C;
+  font-size: 2vh;
+  cursor: pointer;
+  border-radius: 999999vh;
+  color: white; 
+  text-decoration: none;
+}
+@media screen and (max-width: 110vh) {
+  header {
+    padding-right: 2vh;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 85vh) {
+  .headerLinks {
+    display: none;
+  }
+  .contactUsButton {
+    display: none;
   }
 }
