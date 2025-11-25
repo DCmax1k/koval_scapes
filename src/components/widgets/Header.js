@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
 
-
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+      function handleScroll() {
+        setScrolled(window.scrollY > 50); // threshold
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
   return (
     <>
-      <header>
+      <header className={scrolled ? 'scrolled' : ''}>
           {/* Left logo */}
           <Link to='/'>
               <img src='./images/longLogo.png' alt='Koval Scapes Logo' className='headerLogo' />
@@ -16,13 +25,13 @@ export default function Header() {
           {/* Links */}
           <div className='headerLinks'>
               <Link to='/'>Home</Link>
-              <Link to='/aboutus'>About Us</Link>
-              <Link to='/services'>Services</Link>
-              <Link to='/photos'>Photos</Link>
+              <Link to='#aboutus'>About Us</Link>
+              <Link to='#services'>Services</Link>
+              <Link to='#photos'>Photos</Link>
           </div>
           {/* Right contact us */}
           <div>
-              <Link to='/aboutus' className='contactUsButton'>Contact Us</Link>
+              <Link to='/contactus' className='contactUsButton'>Contact Us</Link>
           </div>
           {/* Hamburger menu */}
           <div className='hamburgerMenu' onClick={() => setMenuOpen(true)}>
@@ -37,9 +46,13 @@ export default function Header() {
                 <img src='./images/close.png' alt='Close Menu' />
             </div>
             <Link to='/' onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link to='/aboutus' onClick={() => setMenuOpen(false)}>About Us</Link>
-            <Link to='/services' onClick={() => setMenuOpen(false)}>Services</Link>
-            <Link to='/photos' onClick={() => setMenuOpen(false)}>Photos</Link>
+            <Link to='#aboutus' onClick={() => setMenuOpen(false)}>About Us</Link>
+            <Link to='#services' onClick={() => setMenuOpen(false)}>Services</Link>
+            <Link to='#photos' onClick={() => setMenuOpen(false)}>Photos</Link>
+            <Link to='/contactus' className='button'>Contact Us</Link>
+            <div>
+              
+          </div>
         </div>
     </>
     
