@@ -10,7 +10,7 @@ export default function ContactUs() {
             <p>Lorem ipsum dolor sit amet consectetur.</p>
         </div>
 
-        <form name="contact" netlify>
+        <form name="contact" action={"POST"} data-netlify="true">
           <p>
             <label>Name <input type="text" name="name" /></label>
           </p>
@@ -23,6 +23,7 @@ export default function ContactUs() {
           <p>
             <label>Message <textarea type="message" name="message" /></label>
           </p>
+          <div data-netlify-recaptcha="true"></div>
           <p>
             <button type="submit">Send</button>
           </p>
