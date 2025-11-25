@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Manuale", serif;
+  font-family: "Aleo", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -15,6 +16,10 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,6 +52,19 @@ header {
   color: white; 
   text-decoration: none;
 }
+
+.hamburgerMenu {
+  display: none;
+  height: 5vh;
+  width: 5vh;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger {
+  height: 2vh;
+}
+
 @media screen and (max-width: 110vh) {
   header {
     padding-right: 2vh;
@@ -60,4 +78,116 @@ header {
   .contactUsButton {
     display: none;
   }
+  .hamburgerMenu {
+    display: flex;
+  }
+}
+
+.sideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(.04,.95,.31,1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+
+.sideBar.active {
+  transform: translateX(0);
+}
+
+.sideBar > .closeButton {
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  cursor: pointer;
+  height: 5vh;
+  width: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sideBar > .closeButton > img {
+  height: 3vh;
+}
+
+.sideBar > a {
+  padding: 1vh auto;
+  padding: 2vh 0;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 3vh;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.Landing > .landingHeader {
+  max-width: 80vh;
+  padding: 1vh;
+  margin: 0 auto;
+}
+
+.Landing > .landingHeader > h1 {
+  font-size: 6vh;
+  text-align: center;
+  margin-top: 20vh;
+  font-weight: 700;
+}
+.Landing > .landingHeader > p {
+  font-size: 3vh;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.landingButtons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 5vh;
+  flex-wrap: wrap;
+  padding: 0 2vh;
+}
+
+.button {
+  padding: 1.5vh 3vh;
+  background-color: #2C2C2C;
+  font-size: 2vh;
+  cursor: pointer;
+  border-radius: 999999vh;
+  color: white; 
+  text-decoration: none;
+}
+.button.hollow {
+  background-color: transparent;
+  border: 2px solid #2C2C2C;
+  color: #2C2C2C;
+}
+
+.Image > img {
+  border-radius: 2vh;
+  height: 100%;
+  box-shadow: -0.2vh 0.2vh 0.8vh rgba(0, 0, 0, 0.521);
+}
+
+.landingImages {
+  display: flex;
+  justify-content: center;
+  gap: 5vh;
+  margin-top: 10vh;
+  flex-wrap: wrap;
+  height: 20vh;
+  
+}
+
+.estimate {
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 3vh;
 }
