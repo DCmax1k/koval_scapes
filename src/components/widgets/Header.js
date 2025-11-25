@@ -25,9 +25,9 @@ export default function Header() {
           {/* Links */}
           <div className='headerLinks'>
               <Link to='/'>Home</Link>
-              <Link to='#aboutus'>About Us</Link>
-              <Link to='#services'>Services</Link>
-              <Link to='#photos'>Photos</Link>
+              <a href='#aboutus'>About Us</a>
+              <a href='#services'>Services</a>
+              <a href='#photos'>Photos</a>
           </div>
           {/* Right contact us */}
           <div>
@@ -46,9 +46,9 @@ export default function Header() {
                 <img src='./images/close.png' alt='Close Menu' />
             </div>
             <Link to='/' onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link to='#aboutus' onClick={() => setMenuOpen(false)}>About Us</Link>
-            <Link to='#services' onClick={() => setMenuOpen(false)}>Services</Link>
-            <Link to='#photos' onClick={() => setMenuOpen(false)}>Photos</Link>
+            <a href='#aboutus' onClick={() => setMenuOpen(false)}>About Us</a>
+            <a href='#services' onClick={() => setMenuOpen(false)}>Services</a>
+            <a href='#photos' onClick={() => setMenuOpen(false)}>Photos</a>
             <Link to='/contactus' className='button'>Contact Us</Link>
             <div>
               

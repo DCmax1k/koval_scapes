@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+
 import Image from './Image'
 import InfoSection from './InfoSection'
 import Footer from './Footer'
@@ -15,10 +14,10 @@ export default function Landing() {
         {/* Two buttons */}
         <div className='landingButtons'>
             <div>
-                <Link to='/services' className='button'>Services</Link>
+                <a href='#services' className='button'>Services</a>
             </div>
             <div>
-                <Link to='/contactus' className='button hollow'>Contact Us</Link>
+                <a href='/contactus' className='button hollow'>Contact Us</a>
             </div>
         </div>
 
@@ -46,7 +45,7 @@ export default function Landing() {
 
         </InfoSection>
 
-        <InfoSection id={"services"} title={"Services"} lightBackground={true}  rightSide={true}>
+        <InfoSection id={"services"} title={"Services"} lightBackground={true}  rightSide={true} imageIndex={2}>
             <div>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Adipiscing elit quisque faucibus ex sapien vitae pellentesque. Vitae pellentesque sem placerat in id cursus mi. Cursus mi pretium tellus duis convallis tempus leo. Tempus leo eu aenean sed diam urna tempor. Urna tempor pulvinar vivamus fringilla lacus nec metus.
             </div>

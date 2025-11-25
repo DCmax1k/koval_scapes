@@ -13,6 +13,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -168,13 +169,13 @@ header.scrolled {
 .Landing > .landingHeader {
   max-width: 80vh;
   padding: 1vh;
+  padding-top: 20vh;
   margin: 0 auto;
 }
 
 .Landing > .landingHeader > h1 {
   font-size: 6vh;
   text-align: center;
-  margin-top: 20vh;
   font-weight: 700;
 }
 .Landing > .landingHeader > p {
@@ -207,9 +208,16 @@ header.scrolled {
   color: #2C2C2C;
 }
 
+.Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+}
 .Image > img {
   border-radius: 2vh;
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
   box-shadow: -0.2vh 0.2vh 0.8vh rgba(0, 0, 0, 0.521);
 }
 
@@ -219,8 +227,15 @@ header.scrolled {
   gap: 5vh;
   margin-top: 10vh;
   flex-wrap: wrap;
+}
+.landingImages > .Image > img {
   height: 20vh;
-  
+}
+
+@media screen and (max-width: 85vh) {
+  .landingImages > .Image:nth-child(3), .landingImages > .Image:nth-child(4) {
+    display: none;
+  }
 }
 
 .estimate {
@@ -235,26 +250,25 @@ header.scrolled {
   min-height: 60vh;
   padding: 10vh 5vw;
   background-color: #585858;
-  
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
 }
-.InfoSection > h2 {
+.InfoSection > .words {
+  width: 50vw;
+}
+
+.InfoSection h2 {
   color: white;
   font-size: 4vh;
   margin-bottom: 3vh;
   font-weight: 700;
 }
-.InfoSection > h2.backBg {
+.InfoSection h2.backBg {
   color: black;
 }
 .InfoSection {
   color: #CECECE;
-}
-.InfoSection.right {
-  padding-right: 40vw;
-}
-
-.InfoSection.left {
-  padding-left: 40vw;
 }
 .InfoSection.backBg {
   background-color: #ECEDDC;
@@ -264,10 +278,40 @@ header.scrolled {
 .infoSubsection {
   margin-top: 2.5vh;
   font-size: 2.3vh;
+  
 }
 .infoSubsection.backBg {
   color: #2C2C2C;
 } 
+
+.outparagraphImage {
+  width: 40vw;
+}
+.outparagraphImage > .Image {
+  width: 40vw;
+}
+.outparagraphImage > .Image > img {
+  width: 40vw;
+  object-fit: contain;
+}
+.inparagraphImage {
+  margin-top: 2.5vh;
+  height: 30vh;
+  display: none;
+}
+
+@media screen and (max-width: 85vh) {
+  .inparagraphImage {
+    display: block;
+  }
+  .outparagraphImage {
+    display: none;
+  }
+  .InfoSection > .words {
+  width: 100vw;
+}
+}
+
 
 .spacer {
   height: 2vh;
