@@ -166,19 +166,23 @@ header.scrolled {
   margin: 3vh 1vh;
 }
 
-.Landing > .landingHeader {
+.Landing {
+  padding-top: 20vh;
+}
+
+.landingHeader {
   max-width: 80vh;
   padding: 1vh;
-  padding-top: 20vh;
   margin: 0 auto;
 }
 
-.Landing > .landingHeader > h1 {
+.landingHeader > h1 {
   font-size: 6vh;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
+  margin: 0 3vh;
 }
-.Landing > .landingHeader > p {
+.landingHeader > p {
   font-size: 3vh;
   text-align: center;
   margin-top: 3vh;
@@ -324,4 +328,8 @@ header.scrolled {
   gap: 2vh;
   background-color: #2C2C2C;
   color: white;
+}
+
+.ContactUs {
+  padding-top: 20vh;
 }

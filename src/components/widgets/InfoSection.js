@@ -23,7 +23,7 @@ export default function InfoSection({title="", rightSide=false, lightBackground=
             if (section === 'image') {
               // Image when its between paragraphs on mobile
               return (
-                <div className={`inparagraphImage`}>
+                <div key={index} className={`inparagraphImage`}>
                   <Image />
                 </div>
                 

@@ -2,22 +2,24 @@
 import Image from './Image'
 import InfoSection from './InfoSection'
 import Footer from './Footer'
+import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 
 export default function Landing() {
   return (
     <div className='Landing'>
         <div className='landingHeader'>
-            <h1>Welcome to Koval Scapes</h1>
+            <h1>Welcome to <span style={{color: "#007F00", fontWeight: "800"}}> Koval Scapes</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
         </div>
 
         {/* Two buttons */}
         <div className='landingButtons'>
             <div>
-                <a href='#services' className='button'>Services</a>
+                <HashLink to='#services' className='button' >Services</HashLink>
             </div>
             <div>
-                <a href='/contactus' className='button hollow'>Contact Us</a>
+                <Link to='/contactus' className='button hollow'>Contact Us</Link>
             </div>
         </div>
 

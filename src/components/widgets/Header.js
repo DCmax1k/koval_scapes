@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 export default function Header() {
 
@@ -19,15 +20,15 @@ export default function Header() {
     <>
       <header className={scrolled ? 'scrolled' : ''}>
           {/* Left logo */}
-          <Link to='/'>
+          <Link to='/' style={{outline: "none"}}>
               <img src='./images/longLogo.png' alt='Koval Scapes Logo' className='headerLogo' />
           </Link>
           {/* Links */}
           <div className='headerLinks'>
               <Link to='/'>Home</Link>
-              <a href='#aboutus'>About Us</a>
-              <a href='#services'>Services</a>
-              <a href='#photos'>Photos</a>
+              <HashLink to='/#aboutus'>About Us</HashLink>
+              <HashLink to='/#services'>Services</HashLink>
+              <HashLink to='/#photos'>Photos</HashLink>
           </div>
           {/* Right contact us */}
           <div>
@@ -46,9 +47,9 @@ export default function Header() {
                 <img src='./images/close.png' alt='Close Menu' />
             </div>
             <Link to='/' onClick={() => setMenuOpen(false)}>Home</Link>
-            <a href='#aboutus' onClick={() => setMenuOpen(false)}>About Us</a>
-            <a href='#services' onClick={() => setMenuOpen(false)}>Services</a>
-            <a href='#photos' onClick={() => setMenuOpen(false)}>Photos</a>
+            <HashLink to='/#aboutus' onClick={() => setMenuOpen(false)}>About Us</HashLink>
+            <HashLink to='/#services' onClick={() => setMenuOpen(false)}>Services</HashLink>
+            <HashLink to='/#photos' onClick={() => setMenuOpen(false)}>Photos</HashLink>
             <Link to='/contactus' className='button'>Contact Us</Link>
             <div>
               
