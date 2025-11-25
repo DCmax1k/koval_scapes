@@ -10,7 +10,14 @@ export default function ContactUs() {
             <p>Lorem ipsum dolor sit amet consectetur.</p>
         </div>
 
-        <form name="contact" action={"POST"} data-netlify="true">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
           <p>
             <label>Name <input type="text" name="name" /></label>
           </p>
@@ -18,12 +25,14 @@ export default function ContactUs() {
             <label>Email <input type="email" name="email" /></label>
           </p>
           <p>
-            <label>Subject <input type="subject" name="subject" /></label>
+            <label>Subject <input type="text" name="subject" /></label>
           </p>
           <p>
-            <label>Message <textarea type="message" name="message" /></label>
+            <label>Message <textarea name="message"></textarea></label>
           </p>
+
           <div data-netlify-recaptcha="true"></div>
+
           <p>
             <button type="submit">Send</button>
           </p>
