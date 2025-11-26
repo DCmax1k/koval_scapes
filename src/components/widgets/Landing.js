@@ -61,6 +61,18 @@ export default function Landing() {
 
         </InfoSection>
 
+        {/* EXTRA FOR TESTING */}
+        <InfoSection id={"test"} title={"Extra"} lightBackground={false}  rightSide={false} imageIndex={1}>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Adipiscing elit quisque faucibus ex sapien vitae pellentesque. Vitae pellentesque sem placerat in id cursus mi. Cursus mi pretium tellus duis convallis tempus leo. Tempus leo eu aenean sed diam urna tempor. Urna tempor pulvinar vivamus fringilla lacus nec metus.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
+            </div>
+            
+
+        </InfoSection>
+
         <Footer />
         
     </div>

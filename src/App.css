@@ -18,6 +18,7 @@ html {
 
 body {
   background-color: #ECEDDC;
+  min-height: 100vh;
 }
 
 /* SCROLLBAR */
@@ -292,12 +293,9 @@ header.scrolled {
   width: 40vw;
 }
 .outparagraphImage > .Image {
-  width: 40vw;
+  max-height: 50vh;
 }
-.outparagraphImage > .Image > img {
-  width: 40vw;
-  object-fit: contain;
-}
+
 .inparagraphImage {
   margin-top: 2.5vh;
   height: 30vh;
@@ -330,6 +328,71 @@ header.scrolled {
   color: white;
 }
 
+.Photos {
+  padding-top: 10vh;
+}
+.Photos .photosCont {
+  width: 100vw;
+  padding: 0 5vh;
+  padding-bottom: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2vh;
+  
+}
+.Photos .photosCont > .Image {
+  height: 20vh;
+  width: 20vh;
+  
+}
+.Photos .photosCont::after {
+  content: "";
+  flex: auto;
+}
+
 .ContactUs {
-  padding-top: 20vh;
+  padding-top: 10vh;
+}
+
+form {
+  margin: 2vh auto;
+  max-width: 80vh;
+  padding: 2vh;
+}
+
+form > p > label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  font-weight: 300;
+}
+
+.input {
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 1vh;
+  background-color: #595959;
+  padding: 2vh;
+  color: white;
+  font-size: 1.8vh;
+  font-weight: 400;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  border: 2px solid rgba(1, 183, 255, 0.966);
+}
+
+form > p > button {
+  outline: none;
+  border: none;
+  background-color: #307c30;
+  border-radius: 1vh;
+  padding: 2vh 6vh;
+  margin-top: 2vh;
+  font-size: 2vh;
+  float: right;
+  color: white;
 }

@@ -13,22 +13,23 @@ export default function ContactUs() {
         <form
           name="contact"
           method="POST"
+          action="/success"
           data-netlify="true"
           data-netlify-recaptcha="true"
         >
           <input type="hidden" name="form-name" value="contact" />
 
           <p>
-            <label>Name <input type="text" name="name" /></label>
+            <label>Name <input className='input' type="text" name="name" /></label>
           </p>
           <p>
-            <label>Email <input type="email" name="email" /></label>
+            <label>Email <input className='input' type="email" name="email" /></label>
           </p>
           <p>
-            <label>Subject <input type="text" name="subject" /></label>
+            <label>Subject <input className='input' type="text" name="subject" /></label>
           </p>
           <p>
-            <label>Message <textarea name="message"></textarea></label>
+            <label>Message <textarea className='input' name="message"></textarea></label>
           </p>
 
           <div data-netlify-recaptcha="true"></div>
