@@ -12,10 +12,8 @@ export default function ContactUs() {
 
         <form
           name="contact"
-          method="GET"
-          action="/success"
+          method="POST"
           data-netlify="true"
-          data-netlify-recaptcha="true"
         >
           <input type="hidden" name="form-name" value="contact" />
 
