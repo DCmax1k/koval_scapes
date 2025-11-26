@@ -360,6 +360,7 @@ form {
   margin: 2vh auto;
   max-width: 80vh;
   padding: 2vh;
+  padding-bottom: 20vh;
 }
 
 form > p > label {
@@ -395,4 +396,5 @@ form > p > button {
   font-size: 2vh;
   float: right;
   color: white;
+  cursor: pointer;
 }
